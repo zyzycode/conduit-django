@@ -17,4 +17,4 @@ class ProfileSerializer(serializers.ModelSerializer):
         if obj.image:
             return obj.image
 
-        return 'https://static.productionready.io/images/smiley-cyrus.jpg'
+        return 'https://cdn.discordapp.com/avatars/677597763105456135/a_ad4d5672e465fe0050a411fc24298d4b.webp?size=128'
