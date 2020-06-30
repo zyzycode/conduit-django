@@ -8,7 +8,10 @@ class ConduitJSONRenderer(JSONRenderer):
     object_label = 'object'
 
     def render(self, data, media_type=None, renderer_context=None):
-        errors = data.get('errors', None)
+        try:
+            errors = data.get('errors', None)
+        except:
+            errors = None
 
         if errors is not None:
             return super(ConduitJSONRenderer, self).render(data)
