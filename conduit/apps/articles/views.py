@@ -34,6 +34,7 @@ class ArticleViewSet(mixins.CreateModelMixin,
             queryset = queryset.filter(tags__tag=tag)
 
         favorited_by = self.request.query_params.get('favorited', None)
+
         if favorited_by is not None:
             queryset = queryset.filter(
                 favorited_by__user__username=favorited_by
